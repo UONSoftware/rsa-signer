@@ -33,9 +33,9 @@ class RsaSigner implements Contract
      *
      * @param  string  $privateKey
      * @param  string  $publicKey
-     * @param  string  $passphrase
+     * @param  string|null  $passphrase
      */
-    public function __construct(string $privateKey, string $publicKey, string $passphrase)
+    public function __construct(string $privateKey, string $publicKey, ?string $passphrase)
     {
         if (!($this->publicKey = openssl_pkey_get_public($publicKey))) {
             throw new PublicKeyError(openssl_error_string());

@@ -29,8 +29,10 @@
     }
   },
   "extra": {
-    "providers": [
-      "UonSoftware\\RsaSigner\\RsaSignerServiceProvider"
-    ]
+    "laravel": {
+      "providers": [
+        "UonSoftware\\RsaSigner\\RsaSignerServiceProvider"
+      ]
+    }
   }
 }
