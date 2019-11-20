@@ -1,27 +1,31 @@
 {
-    "name": "uonsoftware/rsa-signer",
-    "description": "Laravel RSA Signer",
-    "type": "library",
-    "license": "Apache 2.0",
-    "authors": [
-        {
-            "name": "Dusan Malusev",
-            "email": "dusan.998@outlook.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=7.3",
-        "ext-openssl": "*",
-        "ext-json": "*"
-    },
-    "require-dev": {
-        "orchestra/testbench": "^4.0"
-    },
-    "autoload": {
-        "UonSoftware\\RsaSigner\\": "src/"
-    },
-    "autoload-dev": {
-        "UonSoftware\\RsaSigner\\Tests\\": "tests/"
+  "name": "uonsoftware/rsa-signer",
+  "description": "Laravel RSA Signer",
+  "type": "library",
+  "license": "Apache 2.0",
+  "authors": [
+    {
+      "name": "Dusan Malusev",
+      "email": "dusan.998@outlook.com"
     }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.3",
+    "ext-openssl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "UonSoftware\\RsaSigner\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "UonSoftware\\RsaSigner\\Tests\\": "tests/"
+    }
+  }
 }
