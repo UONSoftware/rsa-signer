@@ -11,6 +11,11 @@ use UonSoftware\RsaSigner\Exceptions\TokenSignatureInvalid;
 use UonSoftware\RsaSigner\Contracts\RsaSigner as Contract;
 use Illuminate\Contracts\Config\Repository as Config;
 
+/**
+ * Class RsaSigner
+ *
+ * @package UonSoftware\RsaSigner\Services
+ */
 class RsaSigner implements Contract
 {
     /**
@@ -71,13 +76,10 @@ class RsaSigner implements Contract
     {
         $isValid = openssl_verify($data, hex2bin($signature), $this->publicKey, $algorithm);
 
-        if ($isValid === -1) {
+        if ($isValid === -1 || $isValid === 0) {
             throw new TokenSignatureInvalid();
         }
-
-        if ($isValid === 0) {
-            return null;
-        }
+        
         return $signature;
     }
 }
