@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Hob\RsaSigner\Exceptions;
+namespace UonSoftware\RsaSigner\Exceptions;
 
 use Error;
 use Throwable;

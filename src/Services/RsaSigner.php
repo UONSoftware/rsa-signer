@@ -1,14 +1,14 @@
 <?php
 
 
-namespace Hob\RsaSigner\Services;
+namespace UonSoftware\RsaSigner\Services;
 
 
-use Hob\RsaSigner\Exceptions\PublicKeyError;
-use Hob\RsaSigner\Exceptions\PrivateKeyError;
-use Hob\RsaSigner\Exceptions\SignatureCorrupted;
-use Hob\RsaSigner\Exceptions\TokenSignatureInvalid;
-use Hob\RsaSigner\Contracts\RsaSigner as Contract;
+use UonSoftware\RsaSigner\Exceptions\PublicKeyError;
+use UonSoftware\RsaSigner\Exceptions\PrivateKeyError;
+use UonSoftware\RsaSigner\Exceptions\SignatureCorrupted;
+use UonSoftware\RsaSigner\Exceptions\TokenSignatureInvalid;
+use UonSoftware\RsaSigner\Contracts\RsaSigner as Contract;
 use Illuminate\Contracts\Config\Repository as Config;
 
 class RsaSigner implements Contract

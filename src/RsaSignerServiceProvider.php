@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Hob\RsaSigner;
+namespace UonSoftware\RsaSigner;
 
 
-use Hob\RsaSigner\Services\RsaSigner;
+use UonSoftware\RsaSigner\Services\RsaSigner;
 use Illuminate\Support\ServiceProvider;
-use Hob\RsaSigner\Contracts\RsaSigner as Contract;
+use UonSoftware\RsaSigner\Contracts\RsaSigner as Contract;
 
 class RsaSignerServiceProvider extends ServiceProvider
 {

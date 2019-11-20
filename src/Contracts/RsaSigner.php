@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Hob\RsaSigner\Contracts;
+namespace UonSoftware\RsaSigner\Contracts;
 
 
-use Hob\RsaSigner\Exceptions\SignatureCorrupted;
-use Hob\RsaSigner\Exceptions\TokenBadlyFormatted;
-use Hob\RsaSigner\Exceptions\TokenSignatureInvalid;
+use UonSoftware\RsaSigner\Exceptions\SignatureCorrupted;
+use UonSoftware\RsaSigner\Exceptions\TokenBadlyFormatted;
+use UonSoftware\RsaSigner\Exceptions\TokenSignatureInvalid;
 
 interface RsaSigner
 {
