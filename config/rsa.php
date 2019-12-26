@@ -1,6 +1,18 @@
 <?php
 
+use UonSoftware\RsaSigner\Algorithms;
+
 return [
+    /*
+    |--------------------------------------------------------------------------
+    | Algorithm
+    |--------------------------------------------------------------------------
+    |
+    | Default algorithm supplied to Signer::class
+    |
+    */
+    'algorithm' => Algorithms::SHA512,
+
     /*
     |--------------------------------------------------------------------------
     | Public Key
@@ -11,7 +23,7 @@ return [
     | E.g. 'file://path/to/public/key'
     |
     */
-    'public'   => 'file://' . __DIR__ . '/../keys/public.pem',
+    'public'    => env('RSA_PUBLIC_KEY', 'file://'.__DIR__.'/../keys/public.pem'),
 
     /*
     |--------------------------------------------------------------------------
@@ -23,7 +35,7 @@ return [
     | E.g. 'file://path/to/private/key'
     |
     */
-    'private'  => 'file://' . __DIR__ . '/../keys/private.pem',
+    'private'   => env('RSA_PRIVATE_KEY', 'file://'.__DIR__.'/../keys/private.pem'),
 
     /*
     |--------------------------------------------------------------------------
@@ -33,5 +45,5 @@ return [
     | The passphrase for your private key. Can be null if none set.
     |
     */
-    'password' => env('RSA_PRIVATE_KEY_PASSWORD', null),
+    'password'  => env('RSA_PRIVATE_KEY_PASSWORD', null),
 ];

@@ -20,14 +20,14 @@ class RsaSigner implements Contract
     /**
      * @var false|resource
      */
-    private $publicKey;
-    
+    protected $publicKey;
+
     /**
      * @var false|resource
      */
-    private $privateKey;
-    
-    
+    protected $privateKey;
+
+
     /**
      * RsaSigner constructor.
      *
@@ -44,7 +44,7 @@ class RsaSigner implements Contract
             throw new PrivateKeyError(openssl_error_string());
         }
     }
-    
+
     /**
      * @param  string  $data
      * @param  int  $algorithm
@@ -60,7 +60,7 @@ class RsaSigner implements Contract
         }
         return bin2hex($signature);
     }
-    
+
     /**
      * @param  string  $data
      * @param  string  $signature
@@ -72,11 +72,11 @@ class RsaSigner implements Contract
     public function verify(string $data, string $signature, $algorithm = OPENSSL_ALGO_SHA512): string
     {
         $isValid = openssl_verify($data, hex2bin($signature), $this->publicKey, $algorithm);
-        
+
         if ($isValid === -1 || $isValid === 0) {
             throw new TokenSignatureInvalid();
         }
-        
+
         return $signature;
     }
 }
