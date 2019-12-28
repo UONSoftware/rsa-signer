@@ -36,10 +36,12 @@ class RsaSignerServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->publishes(
-            [
-                __DIR__.'/../config/rsa.php' => config_path('rsa.php'),
-            ]
-        );
+        if ($this->app->runningInConsole()) {
+            $this->publishes(
+                [
+                    __DIR__.'/../config/rsa.php' => config_path('rsa.php'),
+                ]
+            );
+        }
     }
 }
