@@ -32,7 +32,10 @@
     "laravel": {
       "providers": [
         "UonSoftware\\RsaSigner\\RsaSignerServiceProvider"
-      ]
+      ],
+      "aliases": {
+        "Signer": "UonSoftware\\RsaSigner\\Facades\\Signer"
+      }
     }
   }
 }
